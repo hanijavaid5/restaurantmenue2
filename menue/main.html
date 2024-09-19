@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div>
+
+    <h1 style="font-size: 50px; font-family: Brush Script MT, cursive";>Restaurant Menu</h1>
+    <p>Select food item an their quantity to calculatethe total price.</p>
+    <h1>Main Course</h1>
+    <p> Select an item:
+      <select style="width: 150px;" id="mainCourse" onchange="calculateTotal()">
+        <option value="--Select an item--">--Select an item--</option>
+        <option value="1">Manchurian($10)</option>
+        <option value="2">Pasta($9)</option>
+        <option value="3">Biryani($4)</option>
+        <option value="4">Chowmien($10)</option>
+      </select>
+      Quantity: <input onchange="calculateTotal()" type="number" value="0" style="width: 30px;" id="mainQuantity">
+
+      <span id="mainTotal">Price: $0.00</span>
+    </p>
+
+    <h1 class="head2">Deserts</h1>
+    <p class="p2">Select an item:
+      <select style="width: 150px;" id="dessert" onchange="calculateTotal()">
+        <option value="--Select an item--">--Select an item--</option>
+        <option value="5">Chocolate($10)</option>
+        <option value="6">Strawberry Custard($7)</option>
+        <option value="7">Rabri($8)</option>
+        <option value="8">Mango Delight($9)</option>
+
+
+      </select>
+      Quantity: <input onchange="calculateTotal()" type="number" style="width: 30px;" value="0" id="dessertQuantity">
+
+      <span id="dessertTotal">Price: $0.00</span>
+    </p>
+
+    <h1 class="head2">Drink</h1>
+    <p class="p2">Select an item:
+      <select style="width: 150px;" id="drink" onchange="calculateTotal()">
+        <option value="--Select an item--">--Select an item--</option>
+        <option value="9"> Slice($10)</option>
+        <option value="10"> Coca Cola($10)</option>
+        <option value="11">Mirinda($5)</option>
+        <option value="12">7up($7)</option>
+      </select> Quantity: <input onchange="calculateTotal()" type="number" style="width: 30px;" value="0"
+        id="drinkQuantity">
+
+      <span id="drinkTotal"> Price: $0.00</span>
+    </p>
+
+
+    <h2 class="head3" id="totalCost">Total Cost: $0.00</h3>
+
+      <button id="placeOrderBtn">PLACE ORDER</button>
+
+      <br>
+      <br>
+      
+
+  </div>
+
+  
+  <script src="main.js"></script>
+
+</body>
+
+</html>
